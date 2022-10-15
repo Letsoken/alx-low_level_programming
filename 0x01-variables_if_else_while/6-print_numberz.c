@@ -1,14 +1,21 @@
 #include <stdio.h>
 
-/* Alphabets */
+/* Numbers */
 
 /**
-  * main - Display alphabets in lower letter
+  * main - Display single digit numbers in base 10
   *
-  * Description: displays only lower case letters with a new line
+  * Description: displays numbers 0 to 9
   * Return: Always equals 0
   */
 int main(void)
 {
+	int n;
+
+	for (n = 0 ; n < 10 ; n++)
+		putchar((n % 10) + '0');
+
+	putchar('\n');
+
 	return (0);
 }
