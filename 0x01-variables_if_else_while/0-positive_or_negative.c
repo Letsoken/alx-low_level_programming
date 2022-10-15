@@ -1,26 +1,32 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-/* Positive or negative - Displays if a random number is positive or negative */
+/* Positive or negative */
 
-/* betty style doc for function main goes there */
-
+/**
+ * main - Displays if a number is positive or negative.
+ *
+ * Description: Displays if a number is positive of negative and less than
+ * 6 or greater than 5
+ * Return: Always equals 0
+ */
 int main(void)
 
 {
 
 	int n;
 
-	rand(time(0));
+	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	/* your code goes there */	
+	/* your code goes there */
 	if (n > 0)
-		printf("%d is positive\n", n);	
+		printf("%d is positive\n", n);
 	else if (n < 0)
 		printf("%d is negative\n", n);
-	}else
-		printf("%d is 0\n", n);
+	else
+		printf("%d is zero\n", n);
 
 	return (0);
 
