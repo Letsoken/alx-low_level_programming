@@ -2,9 +2,10 @@
 #include "main.h"
 
 /**
- * main - Print _Putchar
+ * _putchar - Print
+ * @c : First operand
  *
- * Description: print _Putchar
+ * Description: print
  * Return: Always return 0
  */
 int _putchar(int c)
