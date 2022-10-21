@@ -2,8 +2,6 @@
 
 /**
  * print_numbers - prints 0-9
- * @a: First operand
- * @b: Second operand
  *
  * Description: prints 0-9
  *
