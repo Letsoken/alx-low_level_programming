@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main - print square
+ * main - fizz buzz
  *
- * Description: prints square
+ * Description: fizz buzz
  * Return: Always 0
  */
 
@@ -12,7 +12,7 @@ int main(void)
 
 	for (i = 1 ; i <= 100 ; i++)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
+		if (i % 15 == 0)
 			printf("FizzBuzz ");
 		else if (i % 3 == 0)
 			printf("Fizz ");
