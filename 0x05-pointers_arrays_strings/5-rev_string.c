@@ -22,7 +22,7 @@ void rev_string(char *s)
 	{
 		if (counter % 2 == 0)
 		{
-			if ( i > (counter / 2))
+			if (i > (counter / 2))
 				break;
 		}
 		if (counter % 2 == 1)
@@ -32,6 +32,6 @@ void rev_string(char *s)
 		}
 		temp = *(endptr - i);
 		*(endptr - i) = *(s + i - 1);
-		*(s + i -1) = temp;
+		*(s + i - 1) = temp;
 	}
 }
