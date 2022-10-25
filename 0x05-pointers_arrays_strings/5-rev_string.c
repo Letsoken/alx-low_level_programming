@@ -20,12 +20,18 @@ void rev_string(char *s)
 
 	for (i = 1 ; i <= counter ; i++)
 	{
-		if ((s + i + 1) > (e -1)
-			break;
-
+		if (counter % 2 == 0)
+		{
+			if ( i > (counter / 2))
+				break;
+		}
+		if (counter % 2 == 1)
+		{
+			if (i > ((counter / 2) + 1))
+				break;
+		}
 		temp = *(endptr - i);
 		*(endptr - i) = *(s + i - 1);
-		*(s + i -1) = temp
+		*(s + i -1) = temp;
 	}
-	_putchar('\n');
 }
