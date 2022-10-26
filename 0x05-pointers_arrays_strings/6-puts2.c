@@ -1,16 +1,21 @@
 #include "main.h"
 
 /**
-  * _puts - displays string
+  * puts2 - displays every other string
   * @s: pointer to an char
   * Return: nothing
   */
-void _puts(char *s)
+void puts2(char *s)
 {
-	while (*s != '\0')
+	int i = 0;
+
+	while (*(s + i) != '\0')
 	{
-		_putchar(*s);
-		s++;
+		if (i % 2 == 0)
+		{
+			_putchar(*(s + i));
+		}
+		i++;
 	}
 	_putchar('\n');
 }
