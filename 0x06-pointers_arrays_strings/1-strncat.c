@@ -1,21 +1,23 @@
 #include "main.h"
 
 /**
-  * _strcat - appends src string to destination string
+  * _strncat - appends n number of elements from source to destination
   * @dest: pointer to destination
   * @src: pointer to source
+  * @n: number of elements from source to be appended to destination
   *
   * Return: Pointer to destination
   */
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	char *ptr = dest;
-
+	int i;
 
 	while (*ptr != '\0')
 		ptr++;
 
-	while (*src != '\0')
+	for (i = 0 ; i < n && *src != 0 ; i++)
+
 		*ptr++ = *src++;
 
 	*ptr = '\0';
