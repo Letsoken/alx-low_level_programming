@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * *_strcpy - copy n elements of string to an array
+  * _strncpy - copy n elements of string to an array
   * @dest: pointer to destination
   * @src: pointer to source
   * @n: number of string elements to copy
