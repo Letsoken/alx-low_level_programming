@@ -32,6 +32,7 @@ char *rot13(char *s)
 			if (s[i] == Alph[j])
 			{
 				s[i] = Ciph[j];
+				break;
 			}
 
 		}
