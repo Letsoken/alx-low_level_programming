@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-  * _strstr - displays a chess board
+  * print_chessboard - displays a chess board
   *
-  * @haystack: Pointer to 2d array
+  * @a: Pointer to 2d array
   * Return: nothing
   */
 void print_chessboard(char (*a)[8])
