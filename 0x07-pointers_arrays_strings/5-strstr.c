@@ -1,5 +1,46 @@
 #include "main.h"
 #include <stddef.h>
+#include <stdio.h>
+
+int strcomp(char *s1, char *s2);
+int strlength(char *s);
+char *_strstr(char *haystack, char *needle);
+
+/**
+ * strncomp - compare elements of string s1 and s2
+ * @s: pointer to string 1
+ * @t: pointer to string 2
+ * @n: size of characters to check
+ * Return: difference between strings
+ */
+int strncomp(const char *s, const char *t, int n)
+
+{
+	while (*s && n && (*s == *t))
+	{
+		s++;
+		t++;
+		n--;
+	}
+	return (*(unsigned char *)s - *(unsigned char *)t);
+}
+
+/**
+  * strlength - determine length of string
+  * @s: pointer to an char
+  * Return: index i
+ */
+int strlength(char *s)
+{
+	int i = 0;
+
+	while (*s != '\0')
+	{
+		s++;
+		i++;
+	}
+	return (i);
+}
 
 /**
   * _strstr - finds the first occurrence of the substring in string
@@ -11,36 +52,15 @@
   */
 char *_strstr(char *haystack, char *needle)
 {
-	char *hptr;
-	char *nptr;
-	int hl;
-	int nl;
-	int count;
+	char *ptr;
 
-	count = 0;
-	hl = 0;
-	nl = 0;
-	while (*(haystack + hl) != '\0')
-		hl++;
-	while (*(needle + nl) != '\0')
-		nl++;
+	ptr = haystack;
 
-	while (nl <= hl - count)
+	while (*ptr)
 	{
-		if (*haystack == *needle)
-		{
-			hptr = haystack;
-			nptr = needle;
-			while (*hptr && *nptr && *hptr == *nptr)
-			{
-				hptr++;
-				nptr++;
-			}
-			if (*nptr == '\0')
-				return (haystack);
-		}
-		haystack++;
-		count++;
+		if (strncomp(ptr, needle, strlength(needle)) == 0)
+			return (ptr);
+		ptr++;
 	}
 
 	return (NULL);
