@@ -9,7 +9,7 @@
   * @s2: Pointer to second string
   * Return: Pointer to concatenated string
   */
-char *str_concat(char *s1, char *s2);
+char *str_concat(char *s1, char *s2)
 {
 	char *conptr;
 	char *ptr;
@@ -26,9 +26,9 @@ char *str_concat(char *s1, char *s2);
 	if (conptr == NULL)
 		return (NULL);
 	ptr = conptr;
-	while (s1 != '\0')
+	while (*s1 != '\0')
 		*ptr++ = *s1++;
-	while (s2 != '\0')
+	while (*s2 != '\0')
 		*ptr++ = *s2++;
 	*ptr = '\0';
 
