@@ -27,7 +27,7 @@ void simple_print_buffer(char *buffer, unsigned int size)
 		}
 		printf("0x%02x", buffer[i]);
 		i++;
-							        }
+	}
 	    printf("\n");
 }
 /**
