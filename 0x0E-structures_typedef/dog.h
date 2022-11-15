@@ -1,10 +1,11 @@
 #ifndef DOG_H
 #define DOG_H
+
 /**
-  * struct dog - create type dog
-  * @name: First member
-  * @age: Second member
-  * @owner: Third member
+  * struct dog - Create type dog
+  * @name: Name of dog
+  * @age: Age of dog
+  * @owner: Owner of dog
   *
   * Description: all members are valid properties of dog
   */
@@ -14,4 +15,6 @@ struct dog
 	float age;
 	char *owner;
 };
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
 #endif
