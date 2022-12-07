@@ -1,6 +1,6 @@
 #include "main.h"
 
-/** 
+/**
   * read_textfile - Reads a text file and prints it to POSIX stdout.
   * @filename: A pointer to the name of the file.
   * @letters: The number of letters the
@@ -21,10 +21,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (buff == NULL)
 		return (0);
-	
+
 	o = open(filename, O_RDONLY);
 
-	if(o == -1)
+	if (o == -1)
 	{
 		free(buff);
 		return (0);
@@ -32,15 +32,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	r = read(o, buff, letters);
 
-	if(r == -1)
+	if (r == -1)
 	{
 		free(buff);
 		return (0);
 	}
-	
-	w = write(STDOUT_FILENO, buff, r);
 
-	if(w == -1 || w != r)
+	w = write(STDOUT_FILENO, buff, r);
+	if (w == -1 || w != r)
 	{
 		free(buff);
 		return (0);
