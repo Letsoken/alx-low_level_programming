@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_create- Function creates a new hashtable
+ * hash_table_create - Function creates a new hashtable
  * @size: size of new hashtable
  *
  * Return: Pointer to a newly created hashtable on success
